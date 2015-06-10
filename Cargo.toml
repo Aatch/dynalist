@@ -1,0 +1,13 @@
+[package]
+name = "dynalist"
+description = "Linked Lists for dynamically-sized types"
+version = "0.1.0"
+authors = ["James Miller <james@aatch.net>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+repository = "https://github.com/Aatch/dynalist"
+
+[lib]
+name = "dynalist"
+path = "src/lib.rs"

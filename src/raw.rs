@@ -1,7 +1,7 @@
 use std::{mem, cmp};
 
 pub struct Raw<T: ?Sized> {
-    ptr: *mut T
+    pub ptr: *mut T
 }
 impl<T: ?Sized> Copy for Raw<T> { }
 impl<T: ?Sized> Clone for Raw<T> { fn clone(&self) -> Raw<T> { *self } }
@@ -79,7 +79,7 @@ impl<T: ?Sized> Raw<T> {
     }
 }
 
-fn is_sized<T: ?Sized>() -> bool {
+pub fn is_sized<T: ?Sized>() -> bool {
     mem::size_of::<*const T>() == mem::size_of::<*const ()>()
 }
 
